@@ -15,14 +15,14 @@ export default function Home() {
               src="/img/logos/clairvoyant.png"
               alt="Clairvoyant Intelligence logo"
               width={180}
-              height={38}
+              height={33}
               priority
             />
           </Link>
 
           <ul className="flex gap-8 text-sm font-medium">
             <li>
-              <Link href="">About Us</Link>
+              <Link href="/about">About Us</Link>
             </li>
             <li>
               <Link href="">Request Access</Link>
@@ -33,7 +33,7 @@ export default function Home() {
 
       <main className="mx-auto flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <div className="self-center">
-          <h1 className="max-w-2xl text-6xl font-semibold text-background text-center font-[family-name:var(--font-serif)]">
+          <h1 className="max-w-2xl text-6xl text-background text-center font-[family-name:var(--font-serif)]">
             Detect{" "}
             <Typewriter
               sequence={[
@@ -67,14 +67,12 @@ export default function Home() {
 
         <div className="self-center">
           <div className="flex gap-4 items-center flex-col sm:flex-row">
-            <a
-              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-background hover:bg-white/75 text-foreground text-sm font-semibold gap-2 h-10 px-4"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-background hover:bg-white/75 text-foreground text-sm font-semibold gap-2 h-8 px-4"
+              href="/contact"
             >
               Book Demo
-            </a>
+            </Link>
           </div>
         </div>
       </main>

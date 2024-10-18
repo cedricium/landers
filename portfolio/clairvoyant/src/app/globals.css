@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  font-feature-settings: "cv01" on, "cv02" on, "cv03" on, "cv04" on, "ss02" 1,
+    "ss07" 1, "ss08" 1, "liga" 1, "calt" 1;
 }
 
 @media (prefers-color-scheme: dark) {
