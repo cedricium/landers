@@ -3,31 +3,8 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <div className="grid grid-rows-[40px_1fr] grid-cols-12 max-w-screen-2xl mx-auto items-start justify-items-start min-h-screen overflow-hidden p-8 gap-16 font-[family-name:var(--font-sans)]">
-      <header className="col-start-2 col-end-12 w-full text-background">
-        <nav className="flex items-center justify-between">
-          <Link href="/">
-            <Image
-              src="/img/logos/clairvoyant.png"
-              alt="Clairvoyant Intelligence logo"
-              width={180}
-              height={33}
-              priority
-            />
-          </Link>
-
-          <ul className="flex gap-8 text-sm font-medium">
-            <li>
-              <Link href="/about">About Us</Link>
-            </li>
-            <li>
-              <Link href="">Request Access</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
-      <main className="row-start-2 col-start-2 col-end-8 w-full h-full flex flex-col gap-12 row-start-2 justify-start items-start">
+    <>
+      <main className="row-start-2 col-start-3 md:col-start-2 col-end-11 md:col-end-8 w-full h-full flex flex-col gap-12 row-start-2 justify-start items-start">
         <h1 className="max-w-md text-6xl text-background font-[family-name:var(--font-serif)]">
           Our Ethos
         </h1>
@@ -117,26 +94,31 @@ export default function About() {
         </div>
       </main>
 
-      <aside className="row-start-2 col-start-8 col-end-12 w-full h-fit border border-4 border-double rounded-lg p-4 pb-8 flex flex-col gap-12 row-start-2 justify-start items-start">
+      <aside className="row-start-3 col-span-full md:row-start-2 md:col-start-8 md:col-end-13 lg:col-end-12 w-full h-fit border border-4 border-double rounded-lg p-4 pb-8 flex flex-col gap-12 row-start-2 justify-start items-start">
         <h2 className="max-w-md text-4xl text-background font-[family-name:var(--font-serif)]">
           Meet the Team
         </h2>
 
         <div className="flex flex-col gap-12 w-full">
-          <div className="flex justify-center gap-12 flex-row-reverse">
-            <div className="text-background">
+          <div className="flex justify-center gap-6 flex-row-reverse">
+            <div className="flex-1 text-background">
               <p className="font-[family-name:var(--font-serif)] text-[20px] tracking-tight">
                 Douglas Schultz
               </p>
-              <p className="text-[10px] font-semibold text-white/70">
+              <p className="text-xs font-semibold text-white/70">
                 CEO, co-founder
               </p>
+              <p className="text-xs text-white/70 mt-2">
+                We are actively partnering with early adopter CISOs who have
+                been instrumental in helping expand critical capabilities and
+                value.
+              </p>
             </div>
-            <div className="flex-1 aspect-[100/120] w-full max-w-36 bg-gray-300 rounded-md relative transition-transform -rotate-[8deg] hover:rotate-2">
+            <div className="flex-1 aspect-[100/120] h-fit w-full max-w-36 bg-gray-300 rounded-md relative transition-transform hover:rotate-2 hover:cursor-pointer">
               <Image
                 className="absolute rounded-sm z-10 aspect-square w-[90%] inset-[5%]"
                 src="/img/team/doug.png"
-                alt="ceo"
+                alt="Douglas Schultz"
                 width={400}
                 height={400}
               />
@@ -146,20 +128,24 @@ export default function About() {
             </div>
           </div>
 
-          <div className="flex justify-center gap-12">
-            <div className="text-background">
+          <div className="flex justify-center gap-6">
+            <div className="flex-1 text-background">
               <p className="font-[family-name:var(--font-serif)] text-[20px] tracking-tight">
-                Gautam Altekar, PhD
+                Gautam Altekar
               </p>
-              <p className="text-[10px] font-semibold text-white/70">
+              <p className="text-xs font-semibold text-white/70">
                 CTO, co-founder
               </p>
+              <p className="text-xs text-white/70 mt-2">
+                Interests: Innovative platform technologies with a focus on
+                computer security and lean startup strategy
+              </p>
             </div>
-            <div className="flex-1 aspect-[100/120] w-full max-w-36 bg-gray-300 rounded-md relative transition-transform rotate-[10deg] hover:rotate-2">
+            <div className="flex-1 aspect-[100/120] h-fit w-full max-w-36 bg-gray-300 rounded-md relative transition-transform hover:rotate-2 hover:cursor-pointer">
               <Image
                 className="absolute rounded-sm z-10 aspect-square w-[90%] inset-[5%]"
                 src="/img/team/gautam.png"
-                alt="ceo"
+                alt="Gautam Altekar, PhD"
                 width={400}
                 height={400}
               />
@@ -170,6 +156,6 @@ export default function About() {
           </div>
         </div>
       </aside>
-    </div>
+    </>
   );
 }
